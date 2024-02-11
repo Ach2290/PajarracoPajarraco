@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
     public bool isGameOver;
      private int score;
-     public static GameManager instance;
+     private static GameManager instance;
      public static GameManager Instance { get { return instance; } }
 
     void Awake()
