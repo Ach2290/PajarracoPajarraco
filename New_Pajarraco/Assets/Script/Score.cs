@@ -5,9 +5,12 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.Instance.IncreaseScore();
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.IncreaseScore();
+        }
 
     }
 }
